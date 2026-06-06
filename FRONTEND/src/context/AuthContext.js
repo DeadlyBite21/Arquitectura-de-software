@@ -28,6 +28,7 @@ export const AuthProvider = ({ children }) => {
     localStorage.removeItem('sgpe_token');
     localStorage.removeItem('sgpe_user');
     setUser(null);
+    window.location.href = '/login';
   };
 
   const isAdmin     = user?.rol === 'Administrador';

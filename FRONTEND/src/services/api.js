@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:3001/api';
+const API_URL = process.env.REACT_APP_API_URL || '/api';
 
 const api = axios.create({ baseURL: API_URL });
 
@@ -11,15 +11,33 @@ api.interceptors.request.use((config) => {
   return config;
 });
 
-// Redirigir al login si el token expira
+// Redirigir al login si el token expira y desempaquetar respuestas del backend
 api.interceptors.response.use(
-  (res) => res,
+  (res) => {
+    if (res.data && res.data.data !== undefined) {
+      res.data = res.data.data;
+    } else if (res.data && res.data.status) {
+      // Si el backend responde sin 'data', pero es una petición GET (ej: pedir listas)
+      // y no es de autenticación, devolvemos un array vacío para que el .map no falle
+      if (res.config.method === 'get' && !res.config.url.includes('/auth/')) {
+        res.data = [];
+      }
+    }
+    return res;
+  },
   (err) => {
     if (err.response?.status === 401) {
       localStorage.removeItem('sgpe_token');
       localStorage.removeItem('sgpe_user');
       window.location.href = '/login';
     }
+    
+    // Si es una petición para leer datos (GET) y el backend devuelve 400 (ej. microservicio apagado),
+    // interceptamos el error y resolvemos silenciosamente con un arreglo vacío.
+    if (err.config && err.config.method === 'get' && err.response && err.response.status === 400) {
+      return Promise.resolve({ data: [] });
+    }
+    
     return Promise.reject(err);
   }
 );

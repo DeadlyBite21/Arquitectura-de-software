@@ -1,0 +1,7 @@
+{
+    "python.defaultInterpreterPath": "${workspaceFolder}/BACKEND/.venv/bin/python",
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/BACKEND/shared"
+    ],
+    "git.ignoreLimitWarning": true
+}
