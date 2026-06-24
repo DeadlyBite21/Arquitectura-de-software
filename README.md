@@ -13,3 +13,7 @@ o bash run_backend.sh
 
 cd FRONTEND
 npm start
+
+# usuario de prueba:
+
+# admin:admin1234
