@@ -9,9 +9,8 @@ import MantenimientoPage from './pages/MantenimientoPage';
 import ReservasPage from './pages/ReservasPage';
 import PrestamosPage from './pages/PrestamosPage';
 
-// Componentes placeholders para páginas que podrían faltar en los Layouts
-const ReportesPage = () => <div style={{padding:'2rem'}}>Reportes en construcción</div>;
-const UsuariosPage = () => <div style={{padding:'2rem'}}>Gestión de Usuarios en construcción</div>;
+import ReportesPage from './pages/ReportesPage';
+import UsuariosPage from './pages/UsuariosPage';
 
 // Componente para proteger rutas privadas
 const ProtectedRoute = ({ children }) => {

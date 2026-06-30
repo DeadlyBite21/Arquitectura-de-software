@@ -1,0 +1,29 @@
+[
+    {
+        "id_equipo": 1,
+        "codigo_inventario": "VHF-001",
+        "modelo": "UV-5R",
+        "marca": "Baofeng",
+        "tipo": "VHF",
+        "estado_operativo": "Operativo",
+        "fecha_adquisicion": "2024-01-15"
+    },
+    {
+        "id_equipo": 2,
+        "codigo_inventario": "UHF-002",
+        "modelo": "BF-888S",
+        "marca": "Baofeng",
+        "tipo": "UHF",
+        "estado_operativo": "En reparacion",
+        "fecha_adquisicion": "2023-11-20"
+    },
+    {
+        "id_equipo": 3,
+        "codigo_inventario": "BAS-001",
+        "modelo": "FT-2980R",
+        "marca": "Yaesu",
+        "tipo": "Base",
+        "estado_operativo": "Operativo",
+        "fecha_adquisicion": "2022-05-10"
+    }
+]

@@ -49,11 +49,7 @@ def obtener_equipos():
     return jsonify(respuesta)
 
 # RF-002 (Sistema de reservas)
-@app.route('/api/reservas/solicitar', methods=['POST'])
-def solicitar_reserva():
-    datos_reserva = request.json
-    respuesta = enviar_a_microservicio("reser", datos_reserva)
-    return jsonify(respuesta), 201
+# Todas las rutas de reservas ahora son manejadas por el enrutador dinámico (Catch-all)
 
 # Enrutador dinámico (Catch-all) para los demás endpoints del frontend
 SERVICE_MAP = {

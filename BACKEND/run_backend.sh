@@ -17,6 +17,7 @@ python services/inventario_service.py &
 python services/logistica_service.py &
 python services/mantenimiento_service.py &
 python services/reservas_service.py &
+python services/reportes_service.py &
 
 echo "Iniciando API Gateway..."
 python api_gateway/gateway_app.py &

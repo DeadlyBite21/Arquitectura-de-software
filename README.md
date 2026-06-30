@@ -16,4 +16,8 @@ npm start
 
 # usuario de prueba:
 
-# admin:admin1234
+admin:admin1234
+
+# run all
+
+./run_all.sh

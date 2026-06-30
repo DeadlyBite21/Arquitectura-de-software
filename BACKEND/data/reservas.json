@@ -1,0 +1,28 @@
+[
+    {
+        "id_reserva": 1,
+        "evento": "jamboree 2027",
+        "fecha_inicio": "2027-01-10",
+        "fecha_fin": "2027-01-20",
+        "estado_equipos": "Aprobada",
+        "observaciones": "",
+        "solicitante": "Administrador",
+        "cantidad_solicitada": 2,
+        "equipos": [
+            {
+                "id_equipo": 1,
+                "cantidad": 1,
+                "codigo_inventario": "EQ-TEMP-0",
+                "modelo": "Modelo Solicitado",
+                "id_detalle": 0
+            },
+            {
+                "id_equipo": 3,
+                "cantidad": 1,
+                "codigo_inventario": "EQ-TEMP-1",
+                "modelo": "Modelo Solicitado",
+                "id_detalle": 1
+            }
+        ]
+    }
+]

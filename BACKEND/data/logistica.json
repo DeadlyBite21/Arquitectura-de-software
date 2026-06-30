@@ -1,0 +1,18 @@
+[
+    {
+        "id_prestamo": 1,
+        "id_reserva": "1",
+        "id_equipo": "1",
+        "codigo_inventario": "EQ-1",
+        "modelo": "Equipo en terreno",
+        "evento": "Reserva #1",
+        "encargado_entrega": "Administrador",
+        "fecha_entrega": "2026-06-24T12:00:00",
+        "fecha_devolucion_esperada": "2026-06-25",
+        "estado_entrega": "Bueno",
+        "observaciones_entrega": "",
+        "fecha_devolucion_real": "2026-06-24T18:00:00",
+        "estado_devolucion": "Bueno",
+        "observaciones_devolucion": ""
+    }
+]
